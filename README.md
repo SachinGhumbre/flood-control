@@ -3,12 +3,13 @@ Secure your API proxy's target backend against severe traffic spikes and denial 
 
 ---
 ## Summary Of Files
-| Section                 | Belongs in        | Purpose                                         |
-| ----------------------- | ----------------- | ----------------------------------------------- |
-| Plugin overview         | `README.md`       | Explains what the plugin does and how to use it |
-| How to run Kong locally | `CONTRIBUTING.md` | Helps contributors test the plugin              |
-| Development guidelines  | `CONTRIBUTING.md` | Defines coding practices and standards          |
-| How to submit a PR      | `CONTRIBUTING.md` | Guides on forking, branching, and creating PRs  |
+| Section                           | Belongs in        | Purpose                                         |
+| --------------------------------- | ----------------- | ----------------------------------------------- |
+| Plugin overview                   | `README.md`       | Explains what the plugin does and how to use it |
+| How to use flood-control plugin   | `README.md`       | Explains how to setup and use custom plugin     |
+| How to run Kong locally           | `CONTRIBUTING.md` | Helps contributors test the plugin              |
+| Development guidelines            | `CONTRIBUTING.md` | Defines coding practices and standards          |
+| How to submit a PR                | `CONTRIBUTING.md` | Guides on forking, branching, and creating PRs  |
 
 
 ---
