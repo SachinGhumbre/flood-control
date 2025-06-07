@@ -133,3 +133,14 @@ Use tools like `curl`, `insomnia` or `postman` to simulate the traffic and obser
 The plugin uses **shared memory** for fast, in-memory request tracking, ensuring low latency and high performance.
 
 ---
+
+## Comparison between Apigee, Mulesoft and Kong
+
+
+| Feature          | Apigee                                            | MuleSoft                                                   | Kong                      |
+| ---------------- | ------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------- |
+| **Name**         | Spike Arrest                                      | Spike Control                                              | Flood Control (This plugin)            |
+| **Purpose**      | Smooth traffic bursts                             | Smooth sudden traffic spikes                               | Smooth traffic spikes                  |
+| **Granularity**  | Per App or API                                    | Per App/API (via API Manager)                              | Per IP or Consumer                     |
+| **How it works** | Limits request rate per interval (e.g., 2 req/ms) | Controls how fast traffic can reach the API (max reqs/sec) | Real-time smoothing (custom Lua logic) |
+
