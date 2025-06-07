@@ -1,6 +1,6 @@
 # Contributing to kong flood-control plugin
 
-?? Thank you for considering contributing to this project!
+Thank you for considering contributing to this project!
 
 ## Overview
 
@@ -8,40 +8,26 @@
 
 ---
 
-## ??? Getting Started
-
-1. **Fork this repository** and clone it locally:
-   ```bash
-   git clone https://github.com/SachinGhumbre/flood-control.git
-   cd flood-control
- 
- 
----------------------------------------
-
-# Contributing to flood-control
-
-?? Thank you for considering contributing to this open-source Kong plugin!
-
-`flood-control` helps protect APIs from sudden traffic bursts by smoothing request flow in real-time. It's similar to Apigee's Spike Arrest or MuleSoft's Spike Control and supports both IP-based and consumer-based control mechanisms.
-
----
-
-## ??? Running Kong Locally with This Plugin
+## Running Kong Locally with This Plugin
 
 To test the plugin locally, follow these steps:
 
-1. **Clone your fork**:
+**Clone your fork**:
    ```bash
    git clone https://github.com/SachinGhumbre/flood-control.git
    cd flood-control
-````
+  ```
 
-2. **Setup Kong **:
+
+**Setup Kong**:
+
 
 Install Kong OSS or Enterprise. Below is an example of Docker with the plugin mounted
 For detailed steps on how to install Kong Gateway, refer official documentation (Kong Gateway Setup) [https://docs.konghq.com/gateway/latest/]
 
+
 Create a `docker-compose.yml` with plugin volume mounted:
+
 
    ```yaml
    version: "3"
@@ -63,7 +49,7 @@ Create a `docker-compose.yml` with plugin volume mounted:
          - ./examples/kong.yml:/kong/declarative/kong.yml
    ```
 
-3. **Allocate shared memory**:
+**Allocate shared memory**:
 
 Go to kong container bash and update shared memory allocation. 
 
@@ -75,21 +61,19 @@ This enables to store Identifier and the time when last API call was made by thi
 	lua_shared_dict flood_control 10m;
    ```
    
-4. **Start Kong**:
+**Start Kong**:
 
    ```bash
    docker-compose up
    ```
 
-5. **Send test traffic** (e.g. using curl or Postman):
+**Send test traffic**:
 
-   ```bash
-   curl -i http://localhost:8000/example
-   ```
+Refer README.md file.
 
 ---
 
-## ?? Development Guidelines
+## Development Guidelines
 
 * Use clean, idiomatic Lua code
 * Stick to the structure of existing Kong plugins
@@ -99,17 +83,19 @@ This enables to store Identifier and the time when last API call was made by thi
 
 ---
 
-## ?? Testing the Plugin
+## Testing the Plugin
 
-?? Automated tests are not yet in place (contributions welcome!), but you can manually test using:
+Automated tests are not yet in place (contributions welcome!), but you can manually test using:
 
 * Example Kong configuration in `examples/kong.yml`
 * Docker setup described above
 * Logs (`docker logs kong`) for plugin behavior
 
+Refer README.md for complete testing of plugin.
+
 ---
 
-## ?? Submitting a Pull Request
+## Submitting a Pull Request
 
 We welcome contributions in the form of bug fixes, enhancements, or documentation improvements.
 
@@ -136,20 +122,14 @@ Please ensure your code is well-tested and follows the plugin's purpose of *real
 
 ---
 
-## ?? License
+## License
 
 By contributing to this project, you agree that your code will be licensed under the [Apache License 2.0](LICENSE).
 
 ---
 
-## ?? Need Help?
+## Need Help?
 
-Open a [GitHub Discussion](https://github.com/SachinGhumbre/flood-control/discussions) or create a [new issue](https://github.com/SachinGhumbre/flood-control/issues/new) if you're stuck or have an idea ??.
+Open a [GitHub Discussion](https://github.com/SachinGhumbre/flood-control/discussions) or create a [New Issue](https://github.com/SachinGhumbre/flood-control/issues/new) if you're stuck or have an idea ??.
 
 We look forward to your contributions!
-
-````
-
----
-
-
