@@ -38,7 +38,6 @@ function FloodControlHandler:access(conf)
     local now = ngx.now() -- Get current time in seconds with millisecond precision
     if last_time then
         local elapsed = now - last_time
-        kong.log("Elapsed time since last request: ", elapsed)
         if elapsed < interval then
             return kong.response.exit(
                 429,
