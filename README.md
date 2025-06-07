@@ -1,8 +1,17 @@
-# flood-control plugin
+# flood-control Kong Custom Plugin
 Secure your API proxy's target backend against severe traffic spikes and denial of service attacks.
 
 ---
+## Summary Of Files
+| Section                 | Belongs in        | Purpose                                         |
+| ----------------------- | ----------------- | ----------------------------------------------- |
+| Plugin overview         | `README.md`       | Explains what the plugin does and how to use it |
+| How to run Kong locally | `CONTRIBUTING.md` | Helps contributors test the plugin              |
+| Development guidelines  | `CONTRIBUTING.md` | Defines coding practices and standards          |
+| How to submit a PR      | `CONTRIBUTING.md` | Guides on forking, branching, and creating PRs  |
 
+
+---
 ## What is the Flood Control Plugin?
 
 The **Flood Control Plugin** is a custom Kong plugin designed to control sudden bursts of traffic, similar to the **Spike Arrest** policy in Apigee or **Spike Control** policy in Mulesoft. It limits the rate of incoming requests based on either the **client IP address** or the **authenticated consumer**, helping to smooth out traffic spikes and protect backend services from overload.
@@ -26,7 +35,7 @@ By using this plugin, you can:
 
 You can deploy the Flood Control plugin using one of the following methods:
 
-### Manual Installation
+### Manual Installation of Custom Plugin
 1. Copy your plugin code (schema.lua and handler.lua) to the Kong node under:
    ```
    /usr/local/share/lua/5.1/kong/plugins/flood-control
@@ -51,7 +60,7 @@ You can deploy the Flood Control plugin using one of the following methods:
    ```bash
    kong restart -c /etc/kong/kong.conf
    ```
-### Docker-Based Deployment
+### Docker-Based Installation
 Follow the official Kong guide to build a Docker image with your plugin:
 👉 [Deploy Plugins - Kong Docs](https://docs.konghq.com/gateway/latest/plugin-development/get-started/deploy/)
 
