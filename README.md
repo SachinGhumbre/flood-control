@@ -10,6 +10,8 @@ Secure your API proxy's target backend against severe traffic spikes and denial 
 | How to run Kong locally           | `CONTRIBUTING.md` | Helps contributors test the plugin              |
 | Development guidelines            | `CONTRIBUTING.md` | Defines coding practices and standards          |
 | How to submit a PR                | `CONTRIBUTING.md` | Guides on forking, branching, and creating PRs  |
+| Plugin functionality code         | `handler.lua`     | Plugin functionality code to be executed        |
+| Plugin Schema code                | `schema.lua`      | Plugin configuration schema definition          |
 
 
 ---
@@ -97,7 +99,7 @@ Here are some test scenarios:
 
 ### Test Cases
 
-To ensure simplicity in understanding the plungi behaviour, I added below simple test cases.
+To ensure simplicity in understanding the plugin behaviour, I added below simple test cases.
 
 | Identifier Type       | Rate Limit          | Expected Behavior                              								 |
 |-----------------------|-------------------- |------------------------------------------------------------------------------|
